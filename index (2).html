@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10271a">
+  <meta name="description" content="AGRO AI — fermerlar uchun aqlli qishloq xo'jaligi yordamchisi. Ekinlar, ob-havo va o'simlik parvarishi bo'yicha demo platforma.">
+  <title>AGRO AI — Aqlli qishloq xo'jaligi</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-icon">🌱</div><div><strong>AGRO AI</strong><small>Smart Agriculture</small></div></div>
+      <nav class="nav-menu" aria-label="Asosiy menyu">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-item" data-page="assistant"><span>✦</span> Agro AI yordamchi</button>
+        <button class="nav-item" data-page="diagnosis"><span>⌕</span> O'simlik tahlili</button>
+        <button class="nav-item" data-page="weather"><span>☼</span> Ob-havo</button>
+        <button class="nav-item" data-page="crops"><span>♧</span> Ekinlarim</button>
+        <button class="nav-item" data-page="analytics"><span>▤</span> Analitika</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-tip"><span>💡</span><p>Hosilingizni aqlli boshqarishga yordam beramiz.</p></div><div class="profile"><div class="avatar">F</div><div><b>Fermer</b><small>AGRO AI demo</small></div></div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="menu-toggle" id="menuToggle" aria-label="Menyuni ochish">☰</button><div class="crumb">AGRO AI <span>/</span> <b id="pageLabel">Dashboard</b></div><div class="top-right"><span class="live-dot"></span><span>Demo rejim</span></div></header>
+      <section class="page active" id="dashboard">
+        <div class="welcome"><div><span class="eyebrow">SMART FARMING PLATFORM</span><h1>Hosilingiz uchun <em>aqlli yordam.</em></h1><p>Ekinlaringizni kuzating, tavsiyalar oling va qishloq xo'jaligini yangi bosqichga olib chiqing.</p><button class="primary-btn" data-goto="assistant">AI yordamchiga o'tish <span>→</span></button></div><div class="welcome-art"><div class="sun"></div><div class="hill hill1"></div><div class="hill hill2"></div><div class="plant">🌾</div></div></div>
+        <div class="section-head"><h2>Bugungi ko'rsatkichlar</h2><span class="muted" id="todayDate"></span></div>
+        <div class="stats-grid"><article class="stat-card"><div class="stat-top"><span class="stat-icon green">♧</span><span class="stat-label">Ekinlar</span></div><strong id="cropCount">4</strong><small>Ro'yxatdagi ekinlar</small></article><article class="stat-card"><div class="stat-top"><span class="stat-icon blue">☼</span><span class="stat-label">Harorat</span></div><strong>24° <small class="unit">C</small></strong><small>Demo ob-havo</small></article><article class="stat-card"><div class="stat-top"><span class="stat-icon yellow">✦</span><span class="stat-label">AI maslahat</span></div><strong>24/7</strong><small>Yordamchi demo</small></article><article class="stat-card"><div class="stat-top"><span class="stat-icon violet">◷</span><span class="stat-label">Faoliyat</span></div><strong>7 <small class="unit">kun</small></strong><small>Rejalashtirish ko'rinishi</small></article></div>
+        <div class="dashboard-grid"><article class="panel"><div class="panel-head"><div><h3>Ekinlarim</h3><p>Maydoningizdagi ekinlar ro'yxati</p></div><button class="text-btn" data-goto="crops">Barchasi →</button></div><div id="dashboardCrops" class="crop-mini-list"></div></article><article class="panel quick-panel"><div class="panel-head"><div><h3>Tezkor amallar</h3><p>Kerakli bo'limga o'ting</p></div></div><button class="quick-action" data-goto="diagnosis"><span class="quick-emoji">🔍</span><span><b>O'simlikni tahlil qilish</b><small>Muammo haqida ma'lumot</small></span><span class="arrow">→</span></button><button class="quick-action" data-goto="weather"><span class="quick-emoji">🌤️</span><span><b>Ob-havo ma'lumoti</b><small>Demo prognozni ko'rish</small></span><span class="arrow">→</span></button><button class="quick-action" data-goto="assistant"><span class="quick-emoji">🤖</span><span><b>AI bilan maslahat</b><small>Ekinlar bo'yicha savol bering</small></span><span class="arrow">→</span></button></article></div>
+      </section>
+      <section class="page" id="assistant"><div class="page-title"><span class="eyebrow">AI AGRONOM YORDAMCHI</span><h1>Agro AI yordamchi</h1><p>Ekinlar, parvarish va qishloq xo'jaligi bo'yicha savolingizni yozing.</p></div><div class="chat-panel"><div class="chat-messages" id="chatMessages"><div class="message bot"><div class="bot-avatar">🌱</div><div class="bubble"><b>AGRO AI</b><p>Salom! Men demo agro yordamchiman. Ekin parvarishi, sug'orish yoki tuproq haqida savol berishingiz mumkin.</p></div></div></div><div class="suggestions"><button class="suggestion">Pomidorni qanday parvarishlayman?</button><button class="suggestion">Sug'orish bo'yicha maslahat</button><button class="suggestion">Tuproqni yaxshilash</button></div><form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Savolingizni yozing..." autocomplete="off"><button class="send-btn" type="submit">↑</button></form><p class="disclaimer">Demo: javoblar oldindan tayyorlangan namunalar asosida.</p></div></section>
+      <section class="page" id="diagnosis"><div class="page-title"><span class="eyebrow">O'SIMLIK SALOMATLIGI</span><h1>O'simlik tahlili</h1><p>O'simlikdagi belgi yoki muammoni yozib, demo tavsiyani ko'ring.</p></div><div class="diagnosis-card panel"><div class="diagnosis-icon">🍃</div><h3>Muammoni tavsiflang</h3><p>Masalan: barglar sarg'aymoqda, o'sish sekinlashgan yoki dog'lar paydo bo'lgan.</p><textarea id="diagnosisInput" placeholder="O'simlikdagi belgilarni shu yerga yozing..."></textarea><button class="primary-btn" id="diagnoseBtn">Demo tahlilni boshlash →</button><div class="diagnosis-result" id="diagnosisResult" hidden></div><p class="disclaimer">Bu vosita haqiqiy tashxis bermaydi. Aniq tekshiruv uchun agronom bilan maslahatlashing.</p></div></section>
+      <section class="page" id="weather"><div class="page-title"><span class="eyebrow">OB-HAVO</span><h1>Ob-havo ko'rinishi</h1><p>Quyidagi ma'lumotlar demo misol sifatida berilgan.</p></div><div class="weather-current panel"><div><span class="muted">Demo hudud</span><h2>☀️ 24°C</h2><p>Quyoshli · Qulay sharoit</p></div><div class="weather-note"><b>Qishloq xo'jaligi eslatmasi</b><p>Ob-havo sharoitiga qarab sug'orish va ish rejasini o'zgartiring. Bu ko'rsatkichlar real vaqt ma'lumoti emas.</p></div></div><div class="forecast-grid" id="forecastGrid"></div></section>
+      <section class="page" id="crops"><div class="page-title page-title-row"><div><span class="eyebrow">FERMER XO'JALIGI</span><h1>Ekinlarim</h1><p>Ekinlar ro'yxatini boshqaring.</p></div><button class="primary-btn" id="addCropBtn">＋ Ekin qo'shish</button></div><div class="crop-toolbar"><input id="cropSearch" placeholder="Ekinlarni qidirish..."><span id="cropTotal" class="muted"></span></div><div id="cropGrid" class="crop-grid"></div></section>
+      <section class="page" id="analytics"><div class="page-title"><span class="eyebrow">MA'LUMOTLAR</span><h1>Analitika</h1><p>Platforma imkoniyatlari haqida qisqacha demo ko'rinish.</p></div><div class="analytics-grid"><div class="panel"><h3>Ekinlar tarkibi</h3><div id="analyticsCrops" class="analytics-list"></div></div><div class="panel"><h3>Agro AI imkoniyatlari</h3><div class="feature-list"><div>🌱 <span><b>Ekinlarni boshqarish</b><small>Ekin ro'yxatini saqlash va tartibga solish</small></span></div><div>💬 <span><b>AI maslahat demo</b><small>Qishloq xo'jaligi mavzusida namunaviy javoblar</small></span></div><div>☀️ <span><b>Ob-havo paneli</b><small>Demo ko'rsatkichlar</small></span></div><div>🔍 <span><b>O'simlik tahlili</b><small>Matnli tavsif asosida demo tavsiya</small></span></div></div></div></section>
+      <footer>© <span id="year"></span> AGRO AI · Smart Agriculture Demo</footer>
+    </main>
+  </div>
+  <div class="modal-backdrop" id="cropModal" hidden><div class="modal"><button class="modal-close" id="closeModal">×</button><h2>Yangi ekin qo'shish</h2><p>Ro'yxatingizga ekin ma'lumotini kiriting.</p><form id="cropForm"><label>Ekin nomi<input id="newCropName" required placeholder="Masalan, Bodring"></label><label>Maydon / izoh<input id="newCropNote" placeholder="Masalan, 2 gektar"></label><button class="primary-btn" type="submit">Saqlash</button></form></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>

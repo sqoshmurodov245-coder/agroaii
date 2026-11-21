@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qoshmurodovs1-maker.github.io/agro-ai/sitemap.xml
